@@ -10,19 +10,12 @@ class HomeScreenWeatherInfoColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(weatherInfo.weatherImage),
         Text(weatherInfo.cityName),
         Text('${weatherInfo.temp}'),
-        ElevatedButton(
-            onPressed: () {
-              print(size.height);
-              print(size.width);
-            },
-            child: Text('size')),
       ],
     );
   }
