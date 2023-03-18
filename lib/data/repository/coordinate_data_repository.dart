@@ -1,13 +1,13 @@
 import 'package:weather_app/data/api/coordinate_data_handler.dart';
 import 'package:weather_app/models/location.dart';
 
-class CoordinateRepository {
-  Future<void> saveCoordinateData(double latitude, double longitude) async {
-    CoordinateHandler().saveCoordinateData(latitude, longitude);
+class LocationRepository {
+  Future<void> saveLocationData(double latitude, double longitude) async {
+    await LocationHandler().saveLocationData(latitude, longitude);
   }
 
-  Future<List<LocationData>> loadCoordinateData() async {
-    List<LocationData> data = await CoordinateHandler().loadCoordinateData();
+  Future<List<LocationData>> loadLocationData() async {
+    List<LocationData> data = await LocationHandler().loadLocationData();
     return data;
   }
 }
