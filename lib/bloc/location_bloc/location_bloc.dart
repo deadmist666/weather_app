@@ -42,9 +42,9 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
   }
 
   Future<List<LocationData>> _loadLocationData() {
-    return CoordinateRepository().loadLocationData();
+    return LocationRepository().loadLocationData();
   }
   Future<void> _saveLocationData(double lat, double long) {
-    return CoordinateRepository().saveLocationData(lat, long);
+    return LocationRepository().saveLocationData(lat, long);
   }
 }
